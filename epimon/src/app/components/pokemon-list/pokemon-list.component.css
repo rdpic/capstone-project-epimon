@@ -1,0 +1,40 @@
+body {
+    background-color: #f7f7f7;
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    color: #ffcb05;
+    text-shadow: 2px 2px #3b4cca;
+}
+
+.card {
+    border: 2px solid #ffcb05;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background-color: #ffcb05;
+    color: #3b4cca;
+}
+
+.page-link {
+    color: #ffcb05;
+}
+
+.page-link:hover {
+    background-color: #ffcb05;
+    color: #3b4cca;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+.pagination {
+    margin-top: 20px;
+}

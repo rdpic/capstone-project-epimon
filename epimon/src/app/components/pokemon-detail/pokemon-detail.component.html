@@ -1,0 +1,37 @@
+<div *ngIf="pokemon" class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header text-center bg-warning">
+                    <h2>{{ pokemon.name | titlecase }}</h2>
+                </div>
+                <div class="card-body text-center">
+                    <img [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }}" class="img-fluid mb-3">
+                    <p><strong>Height:</strong> {{ pokemon.height }}</p>
+                    <p><strong>Weight:</strong> {{ pokemon.weight }}</p>
+                    <p><strong>Base Experience:</strong> {{ pokemon.base_experience }}</p>
+                    <p><strong>Abilities:</strong></p>
+                    <ul class="list-group list-group-flush">
+                        <li *ngFor="let ability of pokemon.abilities" class="list-group-item">
+                            {{ ability.ability.name | titlecase }}
+                        </li>
+                    </ul>
+                    <p class="mt-3"><strong>Types:</strong></p>
+                    <div class="d-flex justify-content-center">
+                        <img *ngFor="let type of pokemon.types" [src]="'assets/icons/' + type.type.name + '.png'"
+                            [alt]="type.type.name" class="type-icon">
+                    </div>
+                    <p class="mt-3"><strong>Category:</strong> {{ category }}</p>
+                    <p class="mt-3"><strong>Pokédex Entry:</strong></p>
+                    <p>{{ description }}</p>
+                    <p class="mt-3"><strong>Evolutions:</strong></p>
+                    <ul class="list-group">
+                        <li *ngFor="let evolution of evolutionChain" class="list-group-item">
+                            <a [routerLink]="['/pokemon', evolution]">{{ evolution | titlecase }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

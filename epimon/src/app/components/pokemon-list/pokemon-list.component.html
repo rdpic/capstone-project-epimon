@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center">Pokédex</h2>
+            <input type="text" class="form-control mb-3" placeholder="Search Pokémon" [(ngModel)]="searchText"
+                (input)="applyFilters()">
+
+            <div class="row mb-3">
+                <div class="col">
+                    <select class="form-control" [(ngModel)]="selectedType" (change)="filterByType()">
+                        <option value="">All Types</option>
+                        <option *ngFor="let type of pokemonTypes" [value]="type.name">{{ type.name | titlecase }}
+                        </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <select class="form-control" [(ngModel)]="selectedGeneration" (change)="filterByGeneration()">
+                        <option value="">All Generations</option>
+                        <option *ngFor="let generation of generations" [value]="generation.id">{{
+                            generation.name }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <ul class="list-group">
+                <li *ngFor="let pokemon of filteredPokemonList()" class="list-group-item">
+                    <a [routerLink]="['/pokemon', pokemon.name]">{{ pokemon.name | titlecase }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
