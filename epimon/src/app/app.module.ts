@@ -6,13 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
+import { AbilityDetailComponent } from './components/ability-detail/ability-detail.component';
 
 
 @NgModule({
     declarations: [
         AppComponent,
+        CapitalizePipe,
         PokemonListComponent,
-        PokemonDetailComponent
+        PokemonDetailComponent,
+        AbilityDetailComponent
     ],
     imports: [
         BrowserModule,

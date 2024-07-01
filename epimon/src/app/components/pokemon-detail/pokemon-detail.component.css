@@ -40,3 +40,147 @@ h2 {
     height: 22px;
     margin: 0 5px;
 }
+
+.card.grass {
+    border-color: #78C850;
+}
+
+.card-header.bg-grass {
+    background-color: #78C850;
+}
+
+.card.poison {
+    border-color: #A040A0;
+}
+
+.card-header.bg-poison {
+    background-color: #A040A0;
+}
+
+.card.fire {
+    border-color: #F08030;
+}
+
+.card-header.bg-fire {
+    background-color: #F08030;
+}
+
+.card.water {
+    border-color: #6890F0;
+}
+
+.card-header.bg-water {
+    background-color: #6890F0;
+}
+
+.card.bug {
+    border-color: #A8B820;
+}
+
+.card-header.bg-bug {
+    background-color: #A8B820;
+}
+
+.card.normal {
+    border-color: #A8A878;
+}
+
+.card-header.bg-normal {
+    background-color: #A8A878;
+}
+
+.card.electric {
+    border-color: #F8D030;
+}
+
+.card-header.bg-electric {
+    background-color: #F8D030;
+}
+
+.card.ground {
+    border-color: #E0C068;
+}
+
+.card-header.bg-ground {
+    background-color: #E0C068;
+}
+
+.card.fairy {
+    border-color: #EE99AC;
+}
+
+.card-header.bg-fairy {
+    background-color: #EE99AC;
+}
+
+.card.fighting {
+    border-color: #C03028;
+}
+
+.card-header.bg-fighting {
+    background-color: #C03028;
+}
+
+.card.psychic {
+    border-color: #F85888;
+}
+
+.card-header.bg-psychic {
+    background-color: #F85888;
+}
+
+.card.rock {
+    border-color: #B8A038;
+}
+
+.card-header.bg-rock {
+    background-color: #B8A038;
+}
+
+.card.ghost {
+    border-color: #705898;
+}
+
+.card-header.bg-ghost {
+    background-color: #705898;
+}
+
+.card.ice {
+    border-color: #98D8D8;
+}
+
+.card-header.bg-ice {
+    background-color: #98D8D8;
+}
+
+.card.dragon {
+    border-color: #7038F8;
+}
+
+.card-header.bg-dragon {
+    background-color: #7038F8;
+}
+
+.card.dark {
+    border-color: #705848;
+}
+
+.card-header.bg-dark {
+    background-color: #705848;
+}
+
+.card.steel {
+    border-color: #B8B8D0;
+}
+
+.card-header.bg-steel {
+    background-color: #B8B8D0;
+}
+
+.card.flying {
+    border-color: #A890F0;
+}
+
+.card-header.bg-flying {
+    background-color: #A890F0;
+}

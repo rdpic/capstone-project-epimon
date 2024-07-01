@@ -1,0 +1,22 @@
+<div *ngIf="ability" class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h2>{{ abilityName | capitalize }}</h2>
+                </div>
+                <div class="card-body">
+                    <p><strong>Description:</strong></p>
+                    <p>{{ description }}</p>
+                    <p><strong>Pokémon with this Ability:</strong></p>
+                    <ul class="list-group">
+                        <li *ngFor="let pokemon of pokemonList" class="list-group-item">
+                            <a [routerLink]="['/pokemon', pokemon.name]" [style.color]="pokemon.primaryTypeColor"
+                                class="glow">{{ pokemon.name | capitalize }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

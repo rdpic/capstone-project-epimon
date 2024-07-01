@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 
 export class PokemonService {
     private apiUrl = 'https://pokeapi.co/api/v2/pokemon';
+    private abilityUrl = 'https://pokeapi.co/api/v2/ability';
     private speciesUrl = 'https://pokeapi.co/api/v2/pokemon-species';
 
     constructor(private http: HttpClient) { }
@@ -36,16 +37,16 @@ export class PokemonService {
         return this.http.get<any>(`https://pokeapi.co/api/v2/generation/${generation}`);
     }
 
-    getEvolutionChain(id: number): Observable<any> {
-        return this.http.get<any>(`https://pokeapi.co/api/v2/evolution-chain/${id}`);
-    }
-
     getPokemonSpeciesFromUrl(url: string): Observable<any> {
         return this.http.get<any>(url);
     }
 
     getEvolutionChainFromUrl(url: string): Observable<any> {
         return this.http.get<any>(url);
+    }
+
+    getAbilityDetails(name: string): Observable<any> {
+        return this.http.get<any>(`${this.abilityUrl}/${name}`);
     }
 
     getAllPokemon(): Observable<any> {

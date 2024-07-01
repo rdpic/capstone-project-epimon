@@ -24,7 +24,7 @@
 
             <ul class="list-group">
                 <li *ngFor="let pokemon of filteredPokemonList()" class="list-group-item">
-                    <a [routerLink]="['/pokemon', pokemon.name]">{{ pokemon.name | titlecase }}</a>
+                    <a [routerLink]="['/pokemon', pokemon.name]" class="glow" [style.color]="pokemon.primaryTypeColor">{{ pokemon.name | titlecase }}</a>
                 </li>
             </ul>
         </div>
