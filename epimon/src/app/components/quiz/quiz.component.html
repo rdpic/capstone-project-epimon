@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="text-center">Daily Pokémon Quiz</h2>
+        <div class="quiz-container">
+            <div *ngIf="!quizCompleted">
+                <p class="quiz-question">{{ currentClue }}</p>
+                <input type="text" class="form-control mb-3" placeholder="Enter Pokémon name" [(ngModel)]="userGuess"
+                    (keydown)="handleKeyDown($event)">
+                <button class="btn explore-button" (click)="submitGuess()">Submit</button>
+                <p *ngIf="message" class="mt-3">{{ message }}</p>
+                <p class="mt-3">Remaining Attempts: {{ remainingAttempts }}</p>
+            </div>
+            <div *ngIf="quizCompleted" class="text-center">
+                <p class="quiz-question">{{ message }}</p>
+                <img *ngIf="pokemonImage" [src]="pokemonImage" alt="{{ correctAnswer }}" class="img-fluid mt-3">
+                <p></p>
+                <button class="btn explore-button" (click)="startNewQuiz()">Play Again</button>
+            </div>
+        </div>
+    </div>
+</div>

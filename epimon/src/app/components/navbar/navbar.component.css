@@ -1,0 +1,13 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(62, 50, 73);
+    padding: 1rem 2rem;
+}
+
+.navbar-logo {
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+}

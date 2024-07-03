@@ -11,6 +11,7 @@ h2 {
 .card {
     border: 2px solid #ffcb05;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
 }
 
 .card-header {
@@ -37,4 +38,37 @@ h2 {
 
 .pagination {
     margin-top: 20px;
+}
+
+.pokemon-box {
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    transition: transform 0.2s;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.pokemon-box:hover {
+    transform: scale(1.05);
+}
+
+.pokemon-sprite {
+    width: 100px;
+    height: auto;
+}
+
+.pokemon-box h5 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

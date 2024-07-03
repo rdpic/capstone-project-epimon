@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3 d-flex flex-column">
+        <img class="home-logo mt-4" src="assets/logo/epimon.png" alt="Epimon">
+        <h2 class="text-center mt-4">Login</h2>
+        <form (ngSubmit)="login()">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" class="form-control" [(ngModel)]="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control" [(ngModel)]="password" name="password"
+                    required>
+            </div>
+            <button type="submit" class="btn explore-button btn-block">Login</button>
+        </form>
+        <label class="mt-3"><a class="nav-link" [routerLink]="['/auth/register']">You don't have an account? Register here!</a></label>
+    </div>
+</div>

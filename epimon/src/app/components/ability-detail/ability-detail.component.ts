@@ -49,21 +49,18 @@ export class AbilityDetailComponent implements OnInit {
                 const requests: Observable<any>[] = data.pokemon.map((p: { pokemon: { name: string; }; }) =>
                     this.pokemonService.getPokemonDetails(p.pokemon.name)
                 );
-
-                forkJoin(requests).subscribe((pokemonDetails) => {
+                
+                forkJoin(requests).subscribe((pokemonDetails: any[]) => {
                     this.pokemonList = pokemonDetails.map((pokemon: any) => {
                         const primaryType = pokemon.types[0].type.name;
                         return {
                             name: pokemon.name,
+                            sprite: pokemon.sprites.front_default,
                             primaryType: primaryType,
                             primaryTypeColor: this.typeColors[primaryType] || '#000'
                         };
                     });
-                }, error => {
-                    console.error('Error fetching Pokémon details:', error);
                 });
-            }, error => {
-                console.error('Error fetching ability details:', error);
             });
         });
     }

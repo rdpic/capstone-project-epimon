@@ -73,6 +73,7 @@ export class PokemonListComponent implements OnInit {
                             }
                             return {
                                 name: pokemon.name,
+                                sprite: pokemon.sprites.front_default,
                                 primaryType: pokemon.types[0].type.name,
                                 primaryTypeColor: this.typeColors[pokemon.types[0].type.name] || '#000'
                             };

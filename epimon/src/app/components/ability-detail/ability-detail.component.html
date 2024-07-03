@@ -1,4 +1,4 @@
-<div *ngIf="ability" class="container mt-5">
+<div *ngIf="ability">
     <div class="row">
         <div class="col-md-6 offset-md-3">
             <div class="card">
@@ -9,12 +9,16 @@
                     <p><strong>Description:</strong></p>
                     <p>{{ description }}</p>
                     <p><strong>Pokémon with this Ability:</strong></p>
-                    <ul class="list-group">
-                        <li *ngFor="let pokemon of pokemonList" class="list-group-item">
-                            <a [routerLink]="['/pokemon', pokemon.name]" [style.color]="pokemon.primaryTypeColor"
-                                class="glow">{{ pokemon.name | capitalize }}</a>
-                        </li>
-                    </ul>
+                    <div class="row">
+                        <div *ngFor="let pokemon of pokemonList" class="col-md-3 mb-4">
+                            <a [routerLink]="['/pokemon', pokemon.name]" class="pokemon-link glow">
+                                <div class="pokemon-box" [style.backgroundColor]="pokemon.primaryTypeColor">
+                                    <img [src]="pokemon.sprite" alt="{{ pokemon.name }}" class="pokemon-sprite">
+                                    <h5>{{ pokemon.name | capitalize }}</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

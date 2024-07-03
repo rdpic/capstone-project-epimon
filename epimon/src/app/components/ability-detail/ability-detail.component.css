@@ -34,3 +34,51 @@ h2 {
 .category {
     font-size: 20px;
 }
+
+body {
+    background-color: #f7f7f7;
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    color: #ffcb05;
+    text-shadow: 2px 2px #3b4cca;
+}
+
+.card {
+    border: 2px solid #ffcb05;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background-color: #ffcb05;
+    color: #3b4cca;
+}
+
+.pokemon-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.pokemon-box {
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    transition: transform 0.2s;
+}
+
+.pokemon-box:hover {
+    transform: scale(1.05);
+}
+
+.pokemon-sprite {
+    width: 100px;
+    height: auto;
+}
+
+.pokemon-box h5 {
+    margin-top: 10px;
+    font-size: 1rem;
+}

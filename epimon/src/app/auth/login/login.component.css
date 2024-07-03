@@ -1,0 +1,61 @@
+h2 {
+    margin-bottom: 20px;
+    color: #ffcb05;
+    text-shadow: 2px 2px #3b4cca;
+    animation: fadeIn 2s ease-in-out;
+}
+
+label {
+    color: #ffcb05;
+    text-shadow: 2px 2px #3b4cca;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.btn {
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.home-logo {
+    height: auto;
+    width: auto;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.explore-button {
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ffcc00, #ff3333);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.explore-button:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.explore-button:active {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
